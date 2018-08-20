@@ -60,6 +60,10 @@ server.get('/movies/byTag/:tag', (req, res, next) => {
   return res.status(400).send("No movies found")
 })
 
+server.get('*', (req, res, next) => {
+  res.status(400).send("No data found")
+})
+
 
 
 
